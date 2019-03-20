@@ -30,12 +30,13 @@ body{
 .leftcontent {
   z-index: 0;
   height: calc(100% - 120px);
-  width: calc(100% - 470px);
+  width: 45%;
   margin-top: 10px;
   margin-left: 60px;
   position: fixed;
   top: 050px;
   left: 3px;
+  overflow-y:scroll;
 }
 
 .ltitle {
