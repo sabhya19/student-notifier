@@ -28,7 +28,7 @@ body{
 }
 
 .leftcontent {
-  z-index: 2;
+  z-index: 0;
   height: calc(100% - 120px);
   width: calc(100% - 470px);
   margin-top: 10px;
@@ -59,6 +59,7 @@ body{
   left:50%;
   z-index: 100;
   padding-top: 60px;
+  z-index: -1;
 }
 
 .rtitle {
@@ -120,4 +121,36 @@ body{
 .signup:hover{
   background-color: #5babbf;
   color:#fff;
+}
+.navbar{
+  background-color:#073249;
+  z-index:+1;
+  border-bottom-right-radius:3px;
+  display:block;
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:8%;
+  width:100%
+}
+.navtext{
+  text-decoration:none;
+  font-size:28px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:white;
+  
+}
+.dropdown{
+  position:fixed;
+  z-index:+5;
+  right:10px;
+  top:5px;
+  color:white;
+  font-size: 28px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.ltext{
+  display:block;
+  align-content: left;
+  margin-right:200px;
 }
