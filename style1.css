@@ -57,9 +57,9 @@ body{
   position: fixed;
   top: 0;
   left:50%;
-  z-index: 100;
+  z-index: +1;
   padding-top: 60px;
-  z-index: -1;
+  margin-top:8%;
 }
 
 .rtitle {
