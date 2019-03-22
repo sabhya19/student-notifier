@@ -132,7 +132,8 @@ body{
   top:0px;
   left:0px;
   height:8%;
-  width:100%
+  width:100%;
+  padding-left: 15px;
 }
 .navtext{
   text-decoration:none;
@@ -154,4 +155,24 @@ body{
   display:block;
   align-content: left;
   margin-right:200px;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d5fdfb; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#257a9b; 
+  border-radius:15px;
+  width:35px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(175, 225, 240); 
 }
