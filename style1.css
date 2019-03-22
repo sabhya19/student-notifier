@@ -160,19 +160,17 @@ body{
   width: 20px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #d5fdfb; 
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background:#257a9b; 
+  background:#073249; 
   border-radius:15px;
   width:35px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(175, 225, 240); 
 }
