@@ -157,11 +157,11 @@ body{
   margin-right:200px;
 }
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #d5fdfb; 
+  background: transparent; 
 }
 
 
