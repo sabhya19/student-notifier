@@ -69,16 +69,7 @@ def logout():
    session.pop('username', None)
    return redirect(url_for('index'))
 
-
-
-
-
-
-
-
-
 # running on the server 
-
 if __name__ == '__main__':
     app.secret_key='secret123'
     app.run(debug=True)
