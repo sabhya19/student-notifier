@@ -1,9 +1,9 @@
 from flask import Flask, render_template, flash , redirect, url_for, session, logging, request
 from wtforms import Form, StringField, PasswordField, validators
-
+from pymongo import *
 
 app=Flask(__name__)
-
+client = MongoClient('mongodb+srv://vedaant:vedaant123@studentnotifier-fx3dd.gcp.mongodb.net/test?retryWrites=true')
 users = ["admin", "dean","test"]
 password = "1234"
 
@@ -66,6 +66,14 @@ def logout():
    # remove the username from the session if it is there
    session.pop('username', None)
    return redirect(url_for('index'))
+
+
+
+# database configs 
+
+db = client['test-database']
+collection = db['test-collection']
+
 
 # running on the server 
 if __name__ == '__main__':
