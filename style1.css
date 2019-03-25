@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@import "compass/css3";
 * {
   margin: 0;
   padding: 0;
@@ -74,7 +75,7 @@ body{
 .textinput {
   margin-left: 35px;
   height: 40px;
-  border-width: 0;
+  border-width: 0px;
   border-style: solid;
   border-color: #bfd8df;
   border-left-width: 5px;
@@ -138,9 +139,12 @@ body{
 .navtext{
   text-decoration:none;
   font-size:28px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color:white;
-  
+}
+.navtext:hover{
+  transform: scale(1.5);
+  font-weight: bold;
+  filter: brightness(150%);
 }
 .dropdown{
   position:fixed;
@@ -177,7 +181,7 @@ body{
 .notice{
   border-style:outset;
   border-color: #073249;
-  width: 90%;
+  width: 85%;
   margin-right:0em auto;
   background-color:#bfd8df;
   display:block;
@@ -186,7 +190,6 @@ body{
   left:25px;
   padding:7px;
   padding-left:30px;
-  
 }
 .noticeip{
   margin-left: auto;
@@ -198,8 +201,7 @@ body{
   background-color: #eee;
   width:100%;
   padding-left: 10px;
-  outline: 0;
-  color: #0a3f93;
+  outline: 0px;
   overflow-y:scroll;
   text-align: center;
   word-wrap:normal;
@@ -210,4 +212,102 @@ body{
   background-color: #ecf9fc;
   width:95%;
   color:#257a9b;
+  border-style:inset;
+  border-color:#073249;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.wysiwyg-editor {
+  display: block;
+  width: 90%;
+  margin: 100px auto 0;
+  overflow:scroll;
+ 
+}
+
+.wysiwyg-controls {
+  display: block;
+  width: 100%;
+  height: 20px;
+  border: 1px solid $border-color;
+  border-bottom : none;
+  border-radius: 3px 3px 0 0;
+  background-color:#fff;
+
+  
+  a {
+    display: inline-block;
+    font-size: 60;
+    width: 35px;
+    height: 35px;
+    vertical-align: top;
+    line-height: 38px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: $controls-color;
+  }
+  [data-role="bold"] {
+    font-weight: bold;
+  }
+  [data-role="italic"] {
+    font-style: italic;
+  }
+  [data-role="underline"] {
+    text-decoration: underline;
+  }
+}
+
+[class^="menu"] {
+  position: relative;
+  top: 48%;
+  
+  display: block;
+  width: 65%;
+  height: 2px;
+  margin: 0 auto;
+  background: $controls-color;
+  
+  &:before {
+    @extend [class^="menu"];
+    content: '';
+    top: -5px;
+    width: 80%;
+  }
+  &:after {
+    @extend [class^="menu"];
+    content: '';
+    top: 3px;
+    width: 80%;
+  }
+}
+.menu-left {
+  &:before, &:after {
+    margin-right: 4px;
+  }
+}
+.menu-right {
+  &:before, &:after {
+    margin-left: 4px;
+  }
+}
+
+.wysiwyg-content {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  resize: both;
+  overflow: auto;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  border: 1px solid $border-color;
+  border-radius: 0 0 7px 7px;
+  background: #F2F4F6;
+  overflow:scroll;
 }

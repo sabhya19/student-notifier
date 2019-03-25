@@ -1,6 +1,13 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style1.css">
+        <script>
+        $('.wysiwyg-controls a').on('click', function(e) {
+  
+  e.preventDefault();
+  document.execCommand($(this).data('role'), false);
+});
+        </script>
     </head>
     <body >
         <div class="navbar">
@@ -15,17 +22,30 @@
               <div style="display:block; margin-left:90%;position:fixed; top:0px;">
               <a href="#" class="navtext">Log Out</a>
               </div>
-             
-        </div>
-     <div class="notice">
-         <textarea class="noticeip" name="notice" rows:20;  placeholder="Your notice goes here">
-             NOTICE
-             National Institute Of Technology, Hamirpur.
-             
-        </textarea>
-     </div>
-     <button class="submit" style="position:relative; top:87%; left:85%;">Upload</button>
-       
-       
+              <div class="wysiwyg-editor">
+                <div class="wysiwyg-controls">
+                  <a href='#' data-role='bold'>B</a>
+                  <a href='#' data-role='italic'>I</a>
+                  <a href='#' data-role='underline'>U</a>
+                  <a href='#' data-role='justifyleft'><i class="menu-left"></i></a>
+                  <a href='#' data-role='justifycenter'><i class="menu-center"></i></a>
+                  <a href='#' data-role='justifyright'><i class="menu-right"></i></a>
+                </div>
+                <div class="wysiwyg-content" contenteditable>
+                  <b><span style="font-size:42;text-align:center;">NOTICE
+                    <br> National Institute of technology,Hamirpur<br>
+            </span></b>
+                  <br>
+                  <b>Date</b><br>
+                  <b>Subject:</b>
+                  <br>
+                  Your notice goes here.
+                </div>
+              </div>
+        
+     
+     <button class="submit" style="position:fixed; top:87%; left:85%;">Upload </button>       
+     
+     
     </body>
 </html>
